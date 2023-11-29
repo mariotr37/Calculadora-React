@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+.scene {
+    position: relative;
+    height: 100vh;
+    background: #494949 url('./imagenes/pexels-frank-cone-3214110.jpg') center/cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator {
+    width: 400px;
+    height: 460px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    background-color: #000;
+    height: 120px;
+    border-radius: 10px 10px 0 0;
+    font: icon;
+    font-size: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input {
+    color: #ffffff;
+    text-align: right;
+    padding: 40px 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.keys {
+    background: linear-gradient(135deg, #3a3a3a, #000000);
+    height: 340px;
+    border-radius: 0 0 10px 10px;
+    font: icon;
+    font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keys span:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 25px 60px -10px rgba(255, 255, 255, 0.5);
+}
+
+.row {
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+}
+
+.action {
+    width: 75%;
+    display: flex;
+    background-color: #eeeeee;
+}
+
+.action span {
+    width: 100%;
+    height: 68px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.number {
+    width: 75%;
+    display: flex;
+    color: #ffffff;
+}
+
+.number span {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.symbol {
+    width: 75%;
+    background-color: #eeeeee;
+    font-size: 34px;
+}
+
+.symbol span {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.symbol.action {
+    background: linear-gradient(60deg, #0004ff, #00ff15);
+    border-radius: 0 0 10px 0;
+    color: #ffffff;
+    box-shadow: 0 25px 60px -10px rgba(47, 0, 255, 0.5);
+}
+
+.dull {
+    font-size: 14px;
+    font-weight: bold;
 }
